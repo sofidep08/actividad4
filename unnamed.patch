@@ -1,0 +1,150 @@
+Index: .idea/actividad4.iml
+===================================================================
+diff --git a/.idea/actividad4.iml b/.idea/actividad4.iml
+deleted file mode 100644
+--- a/.idea/actividad4.iml
++++ /dev/null
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="PYTHON_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml
++++ /dev/null
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/profiles_settings.xml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <settings>
+-    <option name="USE_PROJECT_PROFILE" value="false" />
+-    <version value="1.0" />
+-  </settings>
+-</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore
++++ /dev/null
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml
++++ /dev/null
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/actividad4.iml" filepath="$PROJECT_DIR$/.idea/actividad4.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml
++++ /dev/null
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Black">
+-    <option name="sdkName" value="Python 3.13" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13" project-jdk-type="Python SDK" />
+-</project>
+\ No newline at end of file
+Index: actividad_4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/actividad_4.py b/actividad_4.py
+--- a/actividad_4.py
++++ b/actividad_4.py	(date 1752080523913)
+@@ -1,48 +1,1 @@
+-class Paciente:
+-    def __init__(self, nombre,edad,enfermedad,id):
+-        self.nombre = nombre
+-        self.edad = edad
+-        self.enfermedad = enfermedad
+-        self.id = id
+-
+-    def mostrar_info(self):
+-        print(f"Nombre: {self.nombre}, edad: {self.edad}, enfermedad: {self.enfermedad}, id: {self.id}")
+-
+-
+-cola = []
+-
+-opcion=0
+-paciente_encontrado = ""
+-while opcion != 7:
+-    print("==clinica==")
+-    print("1. Agregar paciente")
+-    print("2. Atender paciente")
+-    print("3. mostrar lista de pacientes")
+-
+-
+-    opcion = int(input("Seleccione una opcion: "))
+-    if opcion == 1:
+-        print("===Registrar paciente===")
+-        nombre = input("Nombre: ")
+-        edad = input("Edad: ")
+-        id = input("ID: ")
+-        enfermedad = input("Enfermedad: ")
+-        pacientes = Paciente(nombre,edad,enfermedad,id)
+-        cola.append(pacientes)
+-    if opcion == 2:
+-        print("===atender paciente===")
+-        for paciente in cola:
+-            paciente_encontrado = paciente
+-            paciente_encontrado.mostrar_info()
+-            break
+-        if paciente_encontrado:
+-            print("Paciente atendido correctamente")
+-            cola.remove(paciente_encontrado)
+-        else:
+-            print("no hay pacientes.")
+-
+-    if opcion == 3:
+-        print("===lista de pacientes===")
+-        for paciente in cola:
+-            paciente.mostrar_info()
+-
++print("f")
+\ No newline at end of file
