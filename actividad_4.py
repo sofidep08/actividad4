@@ -6,3 +6,6 @@ class Farmacia:
     def agregar_medicamento (self,nombre_medicamento,dosis):
         pila.append((nombre_medicamento,dosis))
         print("Medicamento guardado")
+    def entregar_medicamento (self,nombre_medicamento,dosis):
+        pila.pop(0)
+        print("Medicamento entregado")
