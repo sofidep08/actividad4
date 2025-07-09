@@ -9,3 +9,5 @@ class Farmacia:
     def entregar_medicamento (self,nombre_medicamento,dosis):
         pila.pop(0)
         print("Medicamento entregado")
+    def mostrar_pila(self,nombre_medicamento,dosis):
+        print("Medicamentos guardados", pila)
