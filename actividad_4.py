@@ -5,33 +5,44 @@ class Paciente:
         self.enfermedad = enfermedad
         self.id = id
 
+    def mostrar_info(self):
+        print(f"Nombre: {self.nombre}, edad: {self.edad}, enfermedad: {self.enfermedad}, id: {self.id}")
 
 
-from queue import Queue
-
-cola = Queue()
+cola = []
 
 opcion=0
+paciente_encontrado = ""
 while opcion != 7:
     print("==clinica==")
     print("1. Agregar paciente")
     print("2. Atender paciente")
-    print("3. mostrar cola de pacientes")
-    print("4. Agrgar medicamento")
-    print("5. entregar medicamento")
-    print("6. mostrar medicamentos")
-    print("7. Salir")
+    print("3. mostrar lista de pacientes")
+
 
     opcion = int(input("Seleccione una opcion: "))
     if opcion == 1:
-        print("Registrar paciente")
+        print("===Registrar paciente===")
         nombre = input("Nombre: ")
         edad = input("Edad: ")
         id = input("ID: ")
         enfermedad = input("Enfermedad: ")
         pacientes = Paciente(nombre,edad,enfermedad,id)
-        cola.put(pacientes)
+        cola.append(pacientes)
     if opcion == 2:
-        print("atender paciente")
-        nombrebuscar = input("Nombre: ")
+        print("===atender paciente===")
+        for paciente in cola:
+            paciente_encontrado = paciente
+            paciente_encontrado.mostrar_info()
+            break
+        if paciente_encontrado:
+            print("Paciente atendido correctamente")
+            cola.remove(paciente_encontrado)
+        else:
+            print("no hay pacientes.")
+
+    if opcion == 3:
+        print("===lista de pacientes===")
+        for paciente in cola:
+            paciente.mostrar_info()
 
