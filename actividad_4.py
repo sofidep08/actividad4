@@ -16,10 +16,10 @@ class Farmacia:
     opcion=0
     while opcion != 7:
         print("[4] Agregar medicamentos")
-        print("[5] Agregar medicamentos")
-        print("[6] Agregar medicamentos")
-        print("[7] Agregar medicamentos")
-        opcion = input(print("Elija una opcion"))
+        print("[5] Entregar medicamentos")
+        print("[6] Mostrar medicamentos")
+        print("[7] salir")
+        opcion = input(print("Elija una opcion: "))
 
         if opcion == "4":
             medicamento = input("Ingrese el nombre del medicamento: ")
@@ -32,3 +32,5 @@ class Farmacia:
         elif opcion == "6":
             print("Mostrando elementos en la pila")
             mostrar_pila()
+        elif opcion == "7":
+            print("Saliendo...")
