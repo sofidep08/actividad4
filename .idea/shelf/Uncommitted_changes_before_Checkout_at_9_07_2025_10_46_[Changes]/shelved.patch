@@ -1,0 +1,20 @@
+Index: actividad_4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>pila = []\r\nclass Farmacia:\r\n    def __init__(self,nombre_medicamentos,dosis):\r\n        self.nombre_medicamento = nombre_medicamentos\r\n        self.dosis = dosis\r\n    def agregar_medicamento (self,nombre_medicamento,dosis):\r\n        pila.append((nombre_medicamento,dosis))\r\n        print(\"Medicamento guardado\")\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/actividad_4.py b/actividad_4.py
+--- a/actividad_4.py	(revision 6db1ae5217ddc087983ca1b5b2fb93becc99edd2)
++++ b/actividad_4.py	(date 1752079575348)
+@@ -1,9 +1,1 @@
+-pila = []
+-class Farmacia:
+-    def __init__(self,nombre_medicamentos,dosis):
+-        self.nombre_medicamento = nombre_medicamentos
+-        self.dosis = dosis
+-    def agregar_medicamento (self,nombre_medicamento,dosis):
+-        pila.append((nombre_medicamento,dosis))
+-        print("Medicamento guardado")
+ 
